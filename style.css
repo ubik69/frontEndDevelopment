@@ -2,6 +2,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body{
+    background-color: #360303;
+}
+
 .divBackground{
     margin-left: 500px;
     width: 1280px;
@@ -10,35 +14,34 @@
     position: absolute;
     background-size: cover;
     filter: grayscale(50%);
-    border: 1px dashed rgb(228, 95, 6,0.1);
+    border: 2px dashed rgb(228, 95, 6,1);
 }
 
 .styledWriting{
-    margin-top: 150px;
-    padding-top: 20px;
-    margin-right: 150px;
-    color: yellow;
-    font-size:60px;
-    position: flex;
-    height: 400px;
-    display: block;
-    width: 340px;
+    color: rgb(255, 255, 255);
+    font-size:69px;
     -webkit-text-stroke: 0.2px rgb(0, 0, 0);
+    text-align: initial;
 }
+
 #ukFlag{
     background-image: url(images/uk.png);
     display: flex;
+    font-weight: 500;
+    font-size: 100px;
     align-items: center;
     -webkit-background-clip: text;
     color: transparent;
 }
 
-#yearFont{
-    font-family: 'Sedgwick Ave Display', cursive;
-    color: #e7ee8b;
-    font-size: 90px;
-}
 
+#yearFont{
+    font-family: "The Beardy Pro Display";
+    -webkit-text-stroke: 3px rgb(0, 0, 0);
+    color: rgba(255, 204, 95, 0.8);
+    font-size: 260px;
+    font-weight: 20;
+}
 
 
 #buttonFrontVid{
@@ -49,7 +52,7 @@
     font-size: 25px;
     padding: 15px;
     border: 1px solid #000;
-    background-color: orange;
+    background-color: rgb(255, 255, 255);
     border-radius: 10%;
 }
 
@@ -77,49 +80,79 @@
     align-items: center;
 }
 
+
+
 .nav1 {
-    background-color: rgba(116, 116, 0, 0.493);
+    background-color: rgba(243, 243, 94, 0.774);
     max-width: 2200px;
     margin: auto;
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-around;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
+    clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 10% 100%); /*get that cool corners*/
+  
 }
 
 .navigateWeb {
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 10px 15px;
     background-color: #FF5733;
     color: #fff;
     border-radius: 3px;
     font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth background color transition and transform on hover */
-    display: inline-block; /* Make buttons inline-block to allow transformation */
-    transform: skewX(-20deg);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    transform: skewX(20deg);
 }
-
-.emptyBetweenGif{
-    height: 50px;
-
-}
-
-
 .navigateWeb:hover{
     transform: skewX(0deg);
     box-shadow: 0 10px 20px red;
 }
+.logo{
+    margin-left: 70px;
+    width: 250px;
+    height: auto;
+    background-color: transparent;
+    transform: skewX(-10deg);
+}
+
+
+.emptyBetweenGif{
+    height: 36px;
+}
+
+.moving-text {
+    position: absolute;
+    white-space: nowrap; 
+    animation: moveText 14s linear infinite;
+    position: relative;
+  }
+
+  
+@keyframes moveText {
+    0% {
+      transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+
+
+}
+.moving-text-font{
+    text-decoration: none;
+    color: inherit;
+    font-size: 25px;
+    color: white;
+    cursor:pointer;
+}
+
+
+
+
 
 .leftSideOfIndex{
-    margin-top: 150px;
-    padding-top: 20px;
-    margin-right: 150px;
-    color: yellow;
-    font-size:60px;
+    margin-top: 50px;
+    margin-right: 50px;
     position: flex;
-    height: 400px;
-    display: block;
-    width: 340px;
-    -webkit-text-stroke: 1px rgb(0, 0, 0);
-
 }
