@@ -6,6 +6,7 @@ body{
     background-color: #360303;
 }
 
+/*classes*/
 .divBackground{
     margin-left: 500px;
     width: 1280px;
@@ -23,66 +24,7 @@ body{
     -webkit-text-stroke: 0.2px rgb(0, 0, 0);
     text-align: initial;
 }
-
-#ukFlag{
-    background-image: url(images/uk.png);
-    display: flex;
-    font-weight: 500;
-    font-size: 100px;
-    align-items: center;
-    -webkit-background-clip: text;
-    color: transparent;
-}
-
-
-#yearFont{
-    font-family: "The Beardy Pro Display";
-    -webkit-text-stroke: 3px rgb(0, 0, 0);
-    color: rgba(255, 204, 95, 0.8);
-    font-size: 260px;
-    font-weight: 20;
-}
-
-
-#buttonFrontVid{
-    top: 50%;
-    left: 43%;
-    position: absolute;
-    display: flex;
-    font-size: 25px;
-    padding: 15px;
-    border: 1px solid #000;
-    background-color: rgb(255, 255, 255);
-    border-radius: 10%;
-}
-
-#buttonFrontVid:hover{
-    display: flex;
-    margin: auto;
-    font-size: 25px;
-    padding: 20px;
-    border: 1px solid #000;
-    background-color: rgba(255, 0, 0, 0.5);
-    transition: all 0.4s ease-out 0s;
-}
-
-
-#orderButtonFont{
-    font-family: 'Poppins', sans-serif;
-    font-size: 20px;
-}
-
-
-#middleButton{
-    padding: 1px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
-.nav1 {
+.navigationBar {
     background-color: rgba(243, 243, 94, 0.774);
     max-width: 2200px;
     margin: auto;
@@ -93,7 +35,6 @@ body{
     clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 10% 100%); /*get that cool corners*/
   
 }
-
 .navigateWeb {
     text-decoration: none;
     padding: 10px 15px;
@@ -113,13 +54,11 @@ body{
     width: 100px;
     height: 50px;
 }
-
-
 .navigateCheckout:hover{
     animation: vibrate 1s ease infinite;
 }
 /*vibration effect for checkout button.*/
-@keyframes vibrate{
+@keyframes vibrate{       
     0%{
         transform:skewX(0deg);
     }
@@ -137,7 +76,6 @@ body{
     }
     
 }
-
 .logo{
     margin-left: 70px;
     width: 250px;
@@ -159,8 +97,6 @@ body{
         transform: skew(0deg);
     }
 }
-
-
 .emptyBetweenGif{
     height: 36px;
 }
@@ -170,9 +106,7 @@ body{
     white-space: nowrap; 
     animation: moveText 14s linear infinite;
     position: relative;
-  }
-
-  
+}
 @keyframes moveText {
     0% {
       transform: translateX(0%);
@@ -180,8 +114,6 @@ body{
     100%{
         transform: translateX(100%);
     }
-
-
 
 }
 .moving-text-font{
@@ -192,12 +124,98 @@ body{
     cursor:pointer;
 }
 
-
-
-
+@keyframes moving-test-animation{
+    0%,100%{
+        color: rgb(255, 87, 51);
+    }
+}
 
 .leftSideOfIndex{
-    margin-top: 50px;
-    margin-right: 50px;
-    position: flex;
+    float: left;
 }
+
+
+
+
+/*ids*/
+
+#ukFlag{
+    background-image: url(images/uk.png);
+    display: flex;
+    font-weight: 500;
+    font-size: 100px;
+    align-items: center;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+#yearFont{
+    font-family: "The Beardy Pro Display";
+    -webkit-text-stroke: 3px rgb(0, 0, 0);
+    color: rgba(255, 204, 95, 0.8);
+    font-size: 260px;
+    font-weight: 20;
+}
+#buttonFrontVid{
+    top: 50%;
+    left: 43%;
+    position: absolute;
+    display: flex;
+    font-size: 25px;
+    padding: 15px;
+    border: 1px solid #000;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10%;
+}
+#buttonFrontVid:hover{
+    display: flex;
+    margin: auto;
+    font-size: 25px;
+    padding: 20px;
+    border: 1px solid #000;
+    background-color: rgba(255, 0, 0, 0.5);
+    transition: all 0.4s ease-out 0s;
+}
+#orderButtonFont{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+#middleButton{
+    padding: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
