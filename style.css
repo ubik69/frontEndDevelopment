@@ -127,12 +127,22 @@ body{
     color: white;
     cursor:pointer;
 }
-
-@keyframes moving-test-animation{
-    0%,100%{
-        color: rgb(255, 87, 51);
+.moving-text-font:hover{
+    animation: hover_Moving 1s ease-in;
+    color: #FF5733;
+    text-shadow: 0 0 10px red;
+}
+@keyframes hover_Moving{
+    0%{
+        color: #ffffff;
+        
+    }
+    50%{
+        color: #FF5733;
+        text-shadow: 0 0 10px red;
     }
 }
+
 
 .leftSideOfIndex{
     float: left;
@@ -194,22 +204,15 @@ body{
     justify-content: center;
     align-items: center;
 }
-#movingId1:hover{
-    animation: hover_Moving 2s ease-in infinite;
-}
-#movingId2:hover{
-    animation: hover_Moving 2s ease-in infinite;
-}
-#movingId3:hover{
-    animation: hover_Moving 2s ease-in infinite;
-}
 
-@keyframes hover_Moving{
-    0%,100%{
-        color: #FF5733;
-        text-shadow: 0 0 10px red;
-    }
-}
+
+
+
+
+
+
+
+
 
 
 
