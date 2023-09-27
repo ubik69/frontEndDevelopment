@@ -142,8 +142,22 @@ body{
     margin-left: 70px;
     width: 250px;
     height: auto;
-    background-color: transparent;
     transform: skewX(-10deg);
+    
+}
+
+.logo:hover{
+    transform:skew(0deg);
+    animation: logoHover 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes logoHover{
+    0%{
+        transform: skew(10deg);
+    }
+    100%{
+        transform: skew(0deg);
+    }
 }
 
 
