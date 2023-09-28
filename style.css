@@ -7,6 +7,16 @@ body{
 }
 
 /*classes*/
+.buttonTest{ /*added button to test audios and potential effects in future.*/
+    right: 0;
+    bottom: 0;
+    position: flex;
+    border: 3px solid black;
+    width: 100px;
+    height: 100px;
+}
+
+
 .divBackground{
     margin-left: 500px;
     width: 1280px;
@@ -204,3 +214,46 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+

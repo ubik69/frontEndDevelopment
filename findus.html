@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!--javascript-->
+    <script type="text/javascript" src="script.js"></script>
     <!--for custom font-->
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,6 +45,28 @@
     <h1 style="color: white;text-shadow:1px 1px 0 #000,-1px 1px 0 #000,-1px -1px 0 #000,1px -1px 0 #000;">
             Welcome top <span style="color: red;">Find us</span> page.
     </h1>
+
+
+
+<!--Audio effects for button clicks.-->
+    <audio id="audio1">
+        <source src="audios/munch1.mp3" type="audio/mp3">
+    </audio>
+    <audio id="audio2">
+        <source src="audios/munch2.mp3" type="audio/mp3">
+    </audio>
+    <audio id="audio3">
+        <source src="audios/munch3.mp3" type="audio/mp3">
+    </audio>
+    <audio id="audio4">
+        <source src="audios/munch4.mp3" type="audio/mp3">
+    </audio>
+    <audio id="audio5">
+        <source src="audios/munch5.mp3" type="audio/mp3">
+    </audio>
+
+    <button class="buttonTest" onclick="randomAudio()">audio test</button>
+    
 
 
 </body>
