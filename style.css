@@ -13,7 +13,7 @@ body{
     position: flex;
     border: 3px solid black;
     width: 100px;
-    height: 100px;
+    height: 100px; 
 }
 
 
@@ -21,7 +21,6 @@ body{
     margin-left: 500px;
     width: 1280px;
     height: 720px;
-    background-image:url(videos/background.gif);
     position: absolute;
     background-size: cover;
     filter: grayscale(50%);
@@ -157,8 +156,6 @@ body{
 .leftSideOfIndex{
     float: left;
 }
-
-
 
 
 /*ids*/

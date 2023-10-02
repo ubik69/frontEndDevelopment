@@ -1,3 +1,8 @@
+setTimeout(function() {
+    randomAudio(); // call the random audio every click on buttons , wait till audio loads up.
+}, 150);
+
+
 function randomAudio(){/*script to get a random audio on click every time.*/
 let floattedRandom = Math.random()*5;               
 let randInt = Math.floor(floattedRandom);
@@ -17,4 +22,3 @@ else{
     audio5.play()
 }
 }
-randomAudio();
