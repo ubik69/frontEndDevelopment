@@ -10,13 +10,34 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!--font used in year.-->
-    <link href="https://db.onlinewebfonts.com/c/2ff872ba4b2a342e28e1ba1e16553517?family=The+Beardy+Pro+Display" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/groovy" rel="stylesheet">
+    <!--make it available for every device-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <title>
         Order Page
     </title>
     <link rel="stylesheet" href="style.css">
+
+    <!--Needed audios for clicking sound effects-->
+<audio id="audio1" preload="metadata">
+    <source src="audios/munch1.mp3" type="audio/mp3">
+</audio>
+<audio id="audio2" preload="metadata">
+    <source src="audios/munch2.mp3" type="audio/mp3">
+</audio>
+<audio id="audio3" preload="metadata">
+    <source src="audios/munch3.mp3" type="audio/mp3">
+</audio>
+<audio id="audio4" preload="metadata">
+    <source src="audios/munch4.mp3" type="audio/mp3">
+</audio>
+<audio id="audio5" preload="metadata">
+    <source src="audios/munch5.mp3" type="audio/mp3">
+</audio>
 
 </head>
 
@@ -43,25 +64,46 @@
 </header>
 
 <body>
-<!--Needed audios for clicking sound effects-->
-<audio id="audio1" preload="metadata">
-    <source src="audios/munch1.mp3" type="audio/mp3">
-</audio>
-<audio id="audio2" preload="metadata">
-    <source src="audios/munch2.mp3" type="audio/mp3">
-</audio>
-<audio id="audio3" preload="metadata">
-    <source src="audios/munch3.mp3" type="audio/mp3">
-</audio>
-<audio id="audio4" preload="metadata">
-    <source src="audios/munch4.mp3" type="audio/mp3">
-</audio>
-<audio id="audio5" preload="metadata">
-    <source src="audios/munch5.mp3" type="audio/mp3">
-</audio>    
     <h1 style="color: white;text-shadow:1px 1px 0 #000,-1px 1px 0 #000,-1px -1px 0 #000,1px -1px 0 #000;">
             Welcome to <span style="color: red;">order</span> page.
     </h1>
+
+<section class="big-order-section">
+    <section class="order-section">
+        <h1 style="text-align: center; color: black;">ORDER AS <span style="color: yellow;">YOU</span> DESIRE</h1><br>
+        <h2 style="text-align: center; color: black;">CHOOSE <span style="color: red;">YOUR</span> BURGER</h2>
+        <form action="" name="process_order" method="GET">
+        <select required class="form-select" name="burger_selection" aria-label="Default select example">
+            <option name="" selected>Select your burger choice</option> <!--Not selected option(must pick one)-->
+            <option name="burger1">Toon-Tastic Burger Delights</option>
+            <option name="burger2">Cheeseville Burger</option>
+            <option name="burger3">Burger Bonanza: An Animated Feast</option>
+          </select>
+        <h2 style="text-align: center;color: black;">CHOOSE <span style="color: red;">YOUR</span> FRIES</h2>
+          <section class="fries-section">
+            <select required class="form-select" name="fries_selection" aria-label="Default select example">
+                <option name="" selected>Select your side</option> <!--Not selected option(must pick one)-->
+                <option name="fries1">Regular Salted Fries</option>
+                <option name="fries2">Skin-on Fries</option>
+                <option name="fries3">Signature Putso Seasoned Fries</option>
+              </select>
+          </section>
+        <h2 style="text-align: center;color: black;">CHOOSE <span style="color: red;">YOUR</span> MILKSHAKE</h2>
+        <section class="dessert-section">
+            <select class="form-select" name="milkshake_selection" aria-label="Default select example">
+                <option selected>Select your milkshake</option>
+                <option name="">None</option> <!--Not selected option-->
+                <option name="dessert1">Vanilla flavour</option>
+                <option name="dessert2">Chocolate flavour</option>
+                <option name="dessert3">Strawberry flavour</option>
+              </select>
+        </section>
+        <input type="submit" id="submit-button" value="ORDER NOW">
+    </form>
+    <script src="orderProcess.js"></script> <!--tbd(script will validate the order , order must have atleast one fries AND burger selection to be able to checkout.)-->
+    </section>
+</section>    
+
 
 
 
