@@ -17,6 +17,8 @@
     <!--bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!--emojis , icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>
         Order Page
     </title>
@@ -43,8 +45,12 @@
 
 <header>
 <!--NAVIGATION-->
-<nav class="navigationBar"> 
+<nav id="navigationBar-mobile" class="navigationBar">
     <a href="index.html" ><img class="logo" id="forLogo" src="images/logo.png"></a>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+    <i class="fa fa-align-justify"></i>
+    </label>
     <a class="navigateWeb"  href="aboutus.html">About Us</a>
     <a class="navigateWeb"  href="findus.html">Find us</a>
     <a class="navigateWeb"  href="order.html">Order</a>
@@ -72,13 +78,15 @@
     <section class="order-section">
         <h1 style="text-align: center; color: black;">ORDER AS <span style="color: yellow;">YOU</span> DESIRE</h1><br>
         <h2 style="text-align: center; color: black;">CHOOSE <span style="color: red;">YOUR</span> BURGER</h2>
-        <form action="" name="process_order" method="GET">
+        <form class="form-container" action="" name="process_order" method="GET">
+        <section class="burger-section">
         <select required class="form-select" name="burger_selection" aria-label="Default select example">
             <option name="" selected>Select your burger choice</option> <!--Not selected option(must pick one)-->
             <option name="burger1">Toon-Tastic Burger Delights</option>
             <option name="burger2">Cheeseville Burger</option>
             <option name="burger3">Burger Bonanza: An Animated Feast</option>
           </select>
+        </section>
         <h2 style="text-align: center;color: black;">CHOOSE <span style="color: red;">YOUR</span> FRIES</h2>
           <section class="fries-section">
             <select required class="form-select" name="fries_selection" aria-label="Default select example">
@@ -102,7 +110,18 @@
     </form>
     <script src="orderProcess.js"></script> <!--tbd(script will validate the order , order must have atleast one fries AND burger selection to be able to checkout.)-->
     </section>
-</section>    
+</section>
+<footer class="footer">
+    <section class="container">
+        <section class="footer-col">
+            <h4></h4>
+            <ul>
+                <li>aaaa<br>a<br>a<br>a<a href=""></a></li>
+            </ul>
+        </section>
+    </section>
+    
+</footer>   
 
 
 

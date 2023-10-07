@@ -2,6 +2,181 @@
     font-family: 'Poppins', sans-serif;
 }
 
+@media screen and (max-width:375px){
+    body{
+        width: 375px;
+    }
+    #navigationBar-mobile{
+        width: 300px;
+        background-color: rgb(255, 136, 0);
+    }
+    #navigationBar-mobile .logo{
+        scale: 0.5;
+        position: relative;
+        left: 120px;
+    }
+    #navigationBar-mobile .navigateWeb {
+        transform: translateX(300px);
+    }
+    #navigationBar-mobile .navigateCheckout{
+        scale: 0.85;
+        position: relative;
+        right:245px;
+        bottom: 5px;
+        box-sizing: border-box;
+    }
+    #navigationBar-mobile .checkbtn , #check{
+        display: block;
+        position: relative;
+        left: 160px;
+        scale: 1.75;
+        color: black;
+        margin: auto;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.5s ease;
+
+    }
+    #navigationBar-mobile #check{
+        position: relative;
+
+        }
+    #navigationBar-mobile .checkbtn:hover{
+        display: block;
+        position: relative;
+        left: 160px;
+        scale: 1.75;
+        color: black;
+        margin: auto;
+        font-size: 16px;
+        cursor: pointer;
+        text-shadow: 2px 2px 3px #fdfdfd;
+    }
+    #check:checked ~ #navigationBar-mobile .navigateWeb{
+        transform: translateX(0px);
+    }
+
+    .emptyBetweenGif{
+        width: 370px;
+    }
+    #smaller-width-big-section{
+        width: 100px;
+    }
+     .big-order-section {
+                position: relative;/*new ui for smaller devices should be made.*/
+                bottom: 350px;
+                right: 386px;
+                transform: scale(0.4);
+            }
+
+            .order-section h1,
+            .order-section h2 {
+                font-size: 25px;
+            }
+
+            .form-container {
+                padding: 6px;
+            }
+
+            .form-select {
+                padding: 5px;
+                font-size: 25px;
+            }
+
+            #submit-button {
+                position: relative;
+                bottom: 120px;
+                padding: 1px 2px;
+                font-size: 1rem;
+            }
+  }
+}
+
+
+@media screen and (max-width: 768px) { /*for mobile devices*/
+    #navigationBar-mobile{
+        width: 600px;
+        background-color: rgb(255, 136, 0);
+    }
+    #navigationBar-mobile .navigateWeb {
+        transform: translateY(200px);
+    }
+    #navigationBar-mobile .navigateCheckout{
+        scale: 0.85;
+        position: relative;
+        right:220px;
+        bottom: 5px;
+    }
+    #navigationBar-mobile .checkbtn , #check{
+        display: block;
+        position: relative;
+        left: 260px;
+        scale: 1.75;
+        color: black;
+        margin: auto;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.5s ease;
+
+    }
+    #navigationBar-mobile .checkbtn:hover{
+        display: block;
+        position: relative;
+        left: 260px;
+        scale: 1.75;
+        color: black;
+        margin: auto;
+        font-size: 16px;
+        cursor: pointer;
+        text-shadow: 2px 2px 3px #fdfdfd;
+    }
+    
+
+    .emptyBetweenGif{
+        width: 840px;
+    }
+     .big-order-section {
+                padding: 5px;
+                scale: 0.66;
+                position: relative;
+                right: 220px;
+                bottom: 200px;
+                height: 1200px;
+            }
+
+            .order-section h1,
+            .order-section h2 {
+                font-size: 25px;
+            }
+            .order-section{
+                
+            }
+
+            .form-container {
+                padding: 6px;
+            }
+
+            .form-select {
+                padding: 5px;
+                font-size: 15px;
+            }
+
+            #submit-button {
+                position: relative;
+                bottom: 120px;
+                padding: 1px 2px;
+                font-size: 1rem;
+            }
+  }
+
+@media screen and (min-width: 769px) and (max-width: 1024px){ /*for Ipads , tablets*/
+
+}
+@media screen and (max-width:1025px){ /*for laptops and desktops*/
+
+}
+
+
 body{
     background-color: #360303;
 }
@@ -44,7 +219,9 @@ body{
     align-items: center;
     padding: 10px;
     clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 10% 100%); /*get that cool corners on navigation bar*/
-  
+}
+.navigationBar #check,.checkbtn{
+    display: none; /*if resolution is big enough , no need for them. */
 }
 .navigateWeb {
     text-decoration: none;
@@ -154,6 +331,34 @@ body{
     float: left;
 }
 
+.big-order-section{
+    transition: all 0.25s ease;
+    margin: auto;
+    width: 1300px;
+    border: solid black;
+}
+
+.order-section{
+    position:relative;
+    border: solid black;
+    width: 400px;
+    height: 1200px;
+}
+
+.form-select{
+    margin:auto;
+    width: 340px;
+    margin-bottom: 230px;
+}
+
+.fries-section{
+    border: solid black;
+}
+.order-view{
+    border: solid black;
+}
+
+
 
 /*ids*/
 
@@ -172,10 +377,10 @@ body{
     color: transparent;
 }
 #yearFont{
-    font-family: "The Beardy Pro Display";
+    font-family: 'Groovy';
     -webkit-text-stroke: 3px rgb(0, 0, 0);
     color: rgba(255, 204, 95, 0.8);
-    font-size: 290px;
+    font-size: 170px;
     font-weight: 20;
 }
 #buttonFrontVid{
@@ -208,9 +413,39 @@ body{
     justify-content: center;
     align-items: center;
 }
-
 #forLogo{
     position: relative;
     left: 30px;
     width: 230px;
+}
+#submit-button{
+    background-color: orange;
+    position: relative;
+    left: 140px;
+    scale: 3;
+    transition: all 0.2s;
+}
+#submit-button:hover{
+    animation: vibrateSubmit 0.5s infinite;
+}
+@keyframes vibrateSubmit{       
+    0%{
+        transform:translateX(0.2px);
+    }
+    50%{
+        transform:translateX(-0.2px);
+    }
+    100%{
+        transform:translateX(0.2px);
+    }
+    
+}
+#submit-button:active{
+    scale: 2.5;
+}
+
+
+#navigationBar{
+    /*special navbar for mobile devices.*/
+    
 }
