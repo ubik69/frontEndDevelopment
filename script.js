@@ -1,7 +1,18 @@
-setTimeout(function() {
-    randomAudio(); // call the random audio every click on buttons , wait till audio loads up.
-}, 150);
+function delayedDirect(){
+    setTimeout(changeText,500);
+    randomAudio()
+}
 
+function changeText(){
+    setTimeout(direction,1000)
+    let result = document.getElementById("result");
+    result.innerHTML = '<br> Wait till we direct you to the checkout page.';
+}
+
+
+function direction(){
+    window.location.href='checkout.html';
+}
 
 function randomAudio(){/*script to get a random audio on click every time.*/
 let floattedRandom = Math.random()*5;               

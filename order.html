@@ -2,7 +2,7 @@
 <html>
 <head>
     <!--scripts-->
-    <script type="text/javascript" src="script.js"></script>
+    <script src="script.js"></script>
     <!--for custom font-->
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -106,7 +106,8 @@
                 <option name="dessert3">Strawberry flavour</option>
               </select>
         </section>
-        <input type="submit" id="submit-button" value="ORDER NOW">
+        <input onmousedown="delayedDirect()" type="button" id="submit-button" value="ORDER NOW"> <!--type of the input is set to button to set onclick sound animation.-->
+        <br><br><br><p id="result">Click order now.</p>
     </form>
     <script src="orderProcess.js"></script> <!--tbd(script will validate the order , order must have atleast one fries AND burger selection to be able to checkout.)-->
     </section>
