@@ -80,7 +80,7 @@
         <h2 style="text-align: center; color: black;">CHOOSE <span style="color: red;">YOUR</span> BURGER</h2>
         <form class="form-container" action="" name="process_order" method="GET">
         <section class="burger-section">
-        <select required class="form-select" name="burger_selection" aria-label="Default select example">
+        <select required class="form-select" name="burger_selection" id="selected_burger" aria-label="Default select example">
             <option name="" selected>Select your burger choice</option> <!--Not selected option(must pick one)-->
             <option name="burger1">Toon-Tastic Burger Delights</option>
             <option name="burger2">Cheeseville Burger</option>
@@ -89,7 +89,7 @@
         </section>
         <h2 style="text-align: center;color: black;">CHOOSE <span style="color: red;">YOUR</span> FRIES</h2>
           <section class="fries-section">
-            <select required class="form-select" name="fries_selection" aria-label="Default select example">
+            <select required class="form-select" name="fries_selection" id="selected_fries" aria-label="Default select example">
                 <option name="" selected>Select your side</option> <!--Not selected option(must pick one)-->
                 <option name="fries1">Regular Salted Fries</option>
                 <option name="fries2">Skin-on Fries</option>
@@ -98,7 +98,7 @@
           </section>
         <h2 style="text-align: center;color: black;">CHOOSE <span style="color: red;">YOUR</span> MILKSHAKE</h2>
         <section class="dessert-section">
-            <select class="form-select" name="milkshake_selection" aria-label="Default select example">
+            <select class="form-select" name="milkshake_selection" id="selected_milkshake" aria-label="Default select example">
                 <option selected>Select your milkshake</option>
                 <option name="">None</option> <!--Not selected option-->
                 <option name="dessert1">Vanilla flavour</option>
