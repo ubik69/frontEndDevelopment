@@ -3,6 +3,7 @@
 <head>
     <!--scripts-->
     <script type="text/javascript" src="script.js"></script>
+    <script src="mobileNavbar.js"></script><!--for mobile navbar-->
     <!--for custom font-->
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +14,8 @@
     <link href="https://db.onlinewebfonts.com/c/2ff872ba4b2a342e28e1ba1e16553517?family=The+Beardy+Pro+Display" rel="stylesheet">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--emojis , icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>
         Find us Page
     </title>
@@ -38,15 +41,28 @@
 
 <header>
 <!--NAVIGATION-->
-<nav class="navigationBar"> 
-    <a href="index.html"  ><img class="logo" id="forLogo" src="images/logo.png"></a>
+<nav id="navigationBar-mobile" class="navigationBar">
+    <a href="index.html" ><img class="logo" id="forLogo" src="images/logo.png"></a>
+    <input type="checkbox" id="check">
+    <label for="check" onclick="toggleNavbar()" class="checkbtn">
+    <i class="fa fa-align-justify"></i>
+    </label>
     <a class="navigateWeb"  href="aboutus.html">About Us</a>
     <a class="navigateWeb"  href="findus.html">Find us</a>
     <a class="navigateWeb"  href="order.html">Order</a>
     <a class="navigateWeb"  href="contact.html">Contact us</a>
     <a class="navigateCheckout" href="checkout.html"><img src="images/empty_cart.png"></a>
 </nav>
-
+<!--mobile navigation bar-->
+<nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutus.html">About</a></li>
+      <li><a href="findus.html">Find us</a></li>
+      <li><a href="order.html">Order</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
 <!--Moving advertise label-->
 <section class="emptyBetweenGif">
     <section class="moving-text">
