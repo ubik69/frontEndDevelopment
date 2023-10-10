@@ -3,6 +3,7 @@
 <head>
     <!--scripts-->
     <script src="script.js"></script>
+    <script src="mobileNavbar.js"></script><!--for mobile navbar-->
     <!--for custom font-->
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,7 +49,7 @@
 <nav id="navigationBar-mobile" class="navigationBar">
     <a href="index.html" ><img class="logo" id="forLogo" src="images/logo.png"></a>
     <input type="checkbox" id="check">
-    <label for="check" class="checkbtn">
+    <label for="check" onclick="toggleNavbar()" class="checkbtn">
     <i class="fa fa-align-justify"></i>
     </label>
     <a class="navigateWeb"  href="aboutus.html">About Us</a>
@@ -99,8 +100,7 @@
         <h2 style="text-align: center;color: black;">CHOOSE <span style="color: red;">YOUR</span> MILKSHAKE</h2>
         <section class="dessert-section">
             <select class="form-select" name="milkshake_selection" id="selected_milkshake" aria-label="Default select example">
-                <option selected>Select your milkshake</option>
-                <option name="">None</option> <!--Not selected option-->
+                <option selected>None</option><!--Not selected option-->
                 <option name="dessert1">Vanilla flavour</option>
                 <option name="dessert2">Chocolate flavour</option>
                 <option name="dessert3">Strawberry flavour</option>
@@ -109,7 +109,7 @@
         <input onmousedown="delayedDirect()" type="button" id="submit-button" value="ORDER NOW"> <!--type of the input is set to button to set onclick sound animation.-->
         <br><br><br><p id="result">Click order now.</p>
     </form>
-    <script src="orderProcess.js"></script> <!--tbd(script will validate the order , order must have atleast one fries AND burger selection to be able to checkout.)-->
+
     </section>
 </section>
 <footer class="footer">
