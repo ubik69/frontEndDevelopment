@@ -2,9 +2,9 @@
     font-family: 'Poppins', sans-serif;
 }
 
-@media screen and (max-width:375px){
+@media screen and (max-width:630px){
     body{
-        width: 375px;
+        width: 535px;
     }
     #navigationBar-mobile{
         width: 300px;
