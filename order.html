@@ -4,6 +4,7 @@
     <!--scripts-->
     <script src="script.js"></script>
     <script src="mobileNavbar.js"></script><!--for mobile navbar-->
+    <script src="orderPicture.js"></script><!--for order preview-->
     <!--for custom font-->
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,7 +49,6 @@
 <!--NAVIGATION-->
 <nav id="navigationBar-mobile" class="navigationBar">
     <a href="index.html" ><img class="logo" id="forLogo" src="images/logo.png"></a>
-    <input type="checkbox" id="check">
     <label for="check" onclick="toggleNavbar()" class="checkbtn">
     <i class="fa fa-align-justify"></i>
     </label>
@@ -85,16 +85,23 @@
     </h1>
 
 <section class="big-order-section">
+    <aside class="order-picture"><img id="displayingPlace" src="images/order_place_holder.png"> <!--id added for javascript.-->
+    <div class="view3D">
+        <div class="sampleOrderPhoto">
+            <img src="images/mini_place_holder.png">
+        </div>
+    </div>
+    </aside>
     <section class="order-section">
         <h1 style="text-align: center; color: black;">ORDER AS <span style="color: yellow;">YOU</span> DESIRE</h1><br>
         <h2 style="text-align: center; color: black;">CHOOSE <span style="color: red;">YOUR</span> BURGER</h2>
         <form class="form-container" action="" name="process_order" method="GET">
         <section class="burger-section">
         <select required class="form-select" name="burger_selection" id="selected_burger" aria-label="Default select example">
-            <option name="" selected>Select your burger choice</option> <!--Not selected option(must pick one)-->
-            <option name="burger1">Toon-Tastic Burger Delights</option>
-            <option name="burger2">Cheeseville Burger</option>
-            <option name="burger3">Burger Bonanza: An Animated Feast</option>
+            <option value="images/order_place_holder.png" name="" selected>Select your burger choice</option> <!--Not selected option(must pick one)-->
+            <option value="images/edited_basic.png" name="burger1">Toon-Tastic Burger Delights</option> <!--value added for javascript identification.-->
+            <option value="images/edited_chees.png" name="burger2">Cheeseville Burger</option>
+            <option value="images/edited_whoop.png" name="burger3">Burger Bonanza: An Animated Feast</option>
           </select>
         </section>
         <h2 style="text-align: center;color: black;">CHOOSE <span style="color: red;">YOUR</span> FRIES</h2>
@@ -118,9 +125,13 @@
         <input onmousedown="delayedDirect()" type="button" id="submit-button" value="ORDER NOW"> <!--type of the input is set to button to set onclick sound animation.-->
         <br><br><br><p id="result">Click order now.</p>
     </form>
-
     </section>
 </section>
+
+
+
+
+
 <footer class="footer">
     <section class="container">
         <section class="footer-col">
@@ -130,7 +141,6 @@
             </ul>
         </section>
     </section>
-    
 </footer>   
 
 
