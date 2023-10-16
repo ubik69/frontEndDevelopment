@@ -28,7 +28,6 @@
 <!--NAVIGATION-->
 <nav id="navigationBar-mobile" class="navigationBar">
     <a href="index.html" ><img class="logo" id="forLogo" src="images/logo.png"></a>
-    <input type="checkbox" id="check">
     <label for="check" onclick="toggleNavbar()" class="checkbtn">
     <i class="fa fa-align-justify"></i>
     </label>
@@ -81,7 +80,7 @@
             Welcome to <span style="color: red;">check out</span> page.
 </h1>
 <script>
-    let burger = localStorage.getItem('burger_Selected');
+    let burger = localStorage.getItem('burger_Selected'); // to be changed.
     let fries = localStorage.getItem('fries_Selected');
     let drink = localStorage.getItem('drink_Selected');
     document.write(burger+'<br>');
