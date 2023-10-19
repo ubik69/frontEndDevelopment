@@ -119,78 +119,18 @@
   }
 
 
+
 @media screen and (min-width: 631px) and (max-width:865px) { /*for mobile devices*/
-    .emptyBetweenGif{
-        width: 865px;
-    }
-    .navigationBar{
-        scale: 0.8;
-    }
     .navigateWeb{
-        scale: 0.7;
+        scale: 0.6;
         padding: 5px 10px;
         font-size: 14px;
     }
-    .big-order-section {
-        position: relative;/*new ui for smaller devices should be made.*/
-        bottom: 230px;
-        right: 258px;
-        transform: scale(0.6);
-    }
-
-    .order-section h1,
-    .order-section h2 {
-        font-size: 25px;
-    }
-
-    .form-container {
-        padding: 6px;
-    }
-
-    .form-select {
-        padding: 5px;
-        font-size: 25px;
-    }
-
-    #submit-button {
-        position: relative;
-        bottom: 120px;
-        padding: 1px 2px;
-        font-size: 1rem;
-    }
-
 }
 
 @media screen and (min-width:871px) and (max-width:1100px){
     .navigateWeb{
         scale: 0.8;
-    }
-    .big-order-section {
-        position: relative;/*new ui for smaller devices should be made.*/
-        bottom: 140px;
-        right: 160px;
-        transform: scale(0.75);
-    }
-
-    .order-section h1,
-    .order-section h2 {
-        font-size: 25px;
-    }
-
-    .form-container {
-        padding: 6px;
-    }
-
-    .form-select {
-        padding: 5px;
-        font-size: 25px;
-    }
-
-    #submit-button {
-        position: relative;
-        bottom: 120px;
-        padding: 1px 2px;
-        font-size: 1rem;
     }
     
 }
@@ -404,6 +344,184 @@ body{
     border: solid white;
     cursor: pointer;
 }
+.mainAbout{
+    font-size: 23px;
+    width: 1200px;
+    height: 200px;
+    padding:25px;
+}
+.mainMenuAboutPic{
+    width:620px;
+    float: right;
+    position: relative;
+    bottom: 160px;
+    animation: old_Effect 5s infinite;
+    border-radius: 50px;
+}
+.belowAbout{
+    text-decoration: none;
+    font-size: 50px;
+    color: orange;
+    margin-left: 450px;
+    width: 700px;
+}
+.belowAbout:hover{
+    animation: rainbow 15s infinite;
+}
+.emptyBetweenAbout{
+    margin-top: 320px;
+}
+.furtherAbout{
+    position: relative;
+    left: 330px;
+    font-size: 70px;
+    display: grid;
+    justify-content: center;
+    color: white;
+}
+.explanationAbout{
+    font-size: 25px;
+    width: 1200px;
+    float: right;
+}
+
+.burgerCentered{
+    height: 300px;
+    border: solid wheat;
+}
+
+/*footer section*/
+
+.app-footer {
+    position: absolute;
+    bottom: 1;
+    width: 100%;
+    background: rgb(73, 28, 28);
+    color: #ffffff4d;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    gap: 8px;
+}
+
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 16px 0;
+    width: 100%;
+}
+
+.app-info {
+    width: 30%;
+}
+
+.app-info h2 {
+    color: #fff;
+}
+.app-info p {
+    font-size: 14px;
+    margin-top: 16px;
+}
+
+.footer-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+
+.action-header {
+    color: #fff;
+}
+
+.unordered-list {
+    list-style:disc;
+    font-size: 14px;
+    margin-top: 16px;
+}
+
+.unordered-list li {
+    margin-bottom: 8px;
+}
+.unordered-list li a {
+    text-decoration: none;
+    transition: 0.3s ease all;
+}
+.unordered-list li a:hover {
+    color: orange;
+}
+
+.copyright-text a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.copyright-text a:hover {
+    color: #63a9fe;
+    transition: 0.2s ease-in all;
+}
+
+.social-icons img {
+    width: 20px;
+    margin-right: 16px;
+    padding: 8px 0;
+    cursor: pointer;
+    transition: 0.2s ease all;
+}
+.social-icons img:hover{
+    width: 35px;
+}
+
+.copyright {
+    font-size: 14px;
+    margin: 4px 0 20px 0;
+}
+
+
+
+@keyframes rainbow{
+    0%{
+        color: red;
+    }
+    15%{
+        color: rgb(255, 0, 157);
+    }
+    30%{
+        color: green;
+    }
+    45%{
+        color: gold;
+    }
+    60%{
+        color: aquamarine;
+    }
+    75%{
+        color: aqua;
+    }
+    90%{
+        color: blue;
+    }
+    100%{
+        color: beige;
+    }
+}
+
+@keyframes old_Effect{
+    0%{
+        filter: grayscale(0%);
+        
+    }
+    100%{
+        filter: grayscale(100%);
+    }
+}
 
 
 
@@ -503,7 +621,12 @@ body{
 #result:hover{
     color: green;
 }
-
+#burgerStyled{
+    width: 350px; 
+    position: relative; top: 200px;
+    transform: rotateY(180deg); 
+    border-radius: 10%;
+}
 
 
 
