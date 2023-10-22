@@ -93,33 +93,33 @@
     </div>
     </aside>
     <section class="order-section">
-        <h1 style="text-align: center; color: black;">ORDER AS <span style="color: yellow;">YOU</span> DESIRE</h1><br>
-        <h2 style="text-align: center; color: black;">CHOOSE <span style="color: red;">YOUR</span> BURGER</h2>
+        <h1 style="text-align: center; color: white;">ORDER AS <span style="color: yellow;">YOU</span> DESIRE</h1><br>
+        <h2 style="text-align: center; color: white;">CHOOSE <span style="color: red;">YOUR</span> BURGER</h2>
         <form class="form-container" action="" name="process_order" method="GET">
         <section class="burger-section">
         <select required class="form-select" name="burger_selection" id="selected_burger" aria-label="Default select example">
-            <option value="images/order_place_holder.png" name="" selected>Select your burger choice</option> <!--Not selected option(must pick one)-->
-            <option value="images/edited_basic.png" name="burger1">Toon-Tastic Burger Delights</option> <!--value added for javascript identification.-->
-            <option value="images/edited_chees.png" name="burger2">Cheeseville Burger</option>
-            <option value="images/edited_whoop.png" name="burger3">Burger Bonanza: An Animated Feast</option>
+            <option data-price="0" value="images/order_place_holder.png" name="" selected>Select your burger choice</option> <!--Not selected option(must pick one)-->
+            <option data-price="4.99" value="images/edited_basic.png" name="burger1">Toon-Tastic Burger Delights - £4.99</option> <!--value added for javascript identification.-->
+            <option data-price="6.99" value="images/edited_chees.png" name="burger2">Cheeseville Burger - £6.99</option>
+            <option data-price="8.99" value="images/edited_whoop.png" name="burger3">Burger Bonanza: An Animated Feast - £8.99</option>
           </select>
         </section>
-        <h2 style="text-align: center;color: black;">CHOOSE <span style="color: red;">YOUR</span> FRIES</h2>
+        <h2 style="text-align: center;color: white;">CHOOSE <span style="color: red;">YOUR</span> FRIES</h2>
           <section class="fries-section">
             <select required class="form-select" name="fries_selection" id="selected_fries" aria-label="Default select example">
-                <option name="" selected>Select your side</option> <!--Not selected option(must pick one)-->
-                <option name="fries1">Regular Salted Fries</option>
-                <option name="fries2">Skin-on Fries</option>
-                <option name="fries3">Signature Putso Seasoned Fries</option>
+                <option data-price="0" name="" selected>Select your side</option> <!--Not selected option(must pick one)-->
+                <option data-price="1.59" name="fries1">Regular Salted Fries - £1.59</option>
+                <option data-price="1.59" name="fries2">Skin-on Fries - £1.59</option>
+                <option data-price="1.99" name="fries3">Signature Putso Seasoned Fries - £1.99</option>
               </select>
           </section>
-        <h2 style="text-align: center;color: black;">CHOOSE <span style="color: red;">YOUR</span> MILKSHAKE</h2>
+        <h2 style="text-align: center;color: white;">CHOOSE <span style="color: red;">YOUR</span> MILKSHAKE</h2>
         <section class="dessert-section">
             <select class="form-select" name="milkshake_selection" id="selected_milkshake" aria-label="Default select example">
-                <option selected>None</option><!--Not selected option-->
-                <option name="dessert1">Vanilla flavour</option>
-                <option name="dessert2">Chocolate flavour</option>
-                <option name="dessert3">Strawberry flavour</option>
+                <option data-price="0" selected>None</option><!--Not selected option-->
+                <option data-price="5.99" name="dessert1">Vanilla flavour - £5.99</option>
+                <option data-price="5.99" name="dessert2">Chocolate flavour - £5.99</option>
+                <option data-price="5.99" name="dessert3">Strawberry flavour - £5.99</option>
               </select>
         </section>
         <input onmousedown="delayedDirect()" type="button" id="submit-button" value="ORDER NOW"> <!--type of the input is set to button to set onclick sound animation.-->
@@ -128,7 +128,7 @@
     </section>
 </section>
 
-
+<section style="height: 120px;"></section>
 
 <footer class="app-footer">
     <section class="container">

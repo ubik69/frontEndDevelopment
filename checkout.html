@@ -79,17 +79,44 @@
     <h1 style="color: white;text-shadow:1px 1px 0 #000,-1px 1px 0 #000,-1px -1px 0 #000,1px -1px 0 #000;">
             Welcome to <span style="color: red;">check out</span> page.
 </h1>
-<script>
-    let burger = localStorage.getItem('burger_Selected'); // to be changed.
-    let fries = localStorage.getItem('fries_Selected');
-    let drink = localStorage.getItem('drink_Selected');
-    document.write(burger+'<br>');
-    document.write(fries+'<br>');
-    document.write(drink+'<br>');
-    localStorage.clear(); // for security purposes , after selections are taken , localstorage been wiped.
-</script>
-
-
+<div class="checkout-item">
+    <h3>Your Selected Items:</h3>
+    <div id="selectedItems"></div>
+</div>
+<script src="checkoutJs.js"></script> <!--order processing.-->
+<footer class="app-footer">
+    <section class="container">
+        <section class="footer-content">
+            <section class="app-info">
+                <h2>PUTSO</h2>
+                <p>We <span style="color: yellow;">PUT</span><span style="color: orange;">SO</span> Much Love in Since 1969 <i style="color: red;" class="fa fa-heart"></i><i style="color: yellow;" class="fa fa-heart"></i><i style="color: orange;" class="fa fa-heart"></i></p>
+            </section>
+            <section class="footer-actions">
+                <section class="services-actions">
+                    <h2 class="action-header">Services</h2>
+                    <ul class="unordered-list">
+                        <li><a href="findus.html">Find us in your area</a></li>
+                        <li><a href="contact.html">Contact us</a></li>
+                        <li><a href="order.html">Order Page</a></li>
+                        <li><a href="aboutus.html">About us</a></li>
+                    </ul>
+                </section>
+            </section>
+        </section>
+        <section class="social-icons">
+            <a href="https://facebook.com/putso"><img src="images/facebook.png" alt="fb-icon"></a>
+            <a href="https://instagram.com/putso"><img src="images/instagram.png" alt="insta-icon"></a>
+            <a href="https://twitter.com/putso"><img src="images/twitter.png" alt="twitter-icon"></a>
+            <a href="https://youtube.com/putso"><img src="images/youtube.png" alt="yt-icon"></a>
+        </section>
+        <section class="copyright">
+            <p class="copyright-text">
+                &copy;<b style="color: rgba(255, 255, 0, 0.466);">PUTSO</b> 2023 All rights reserved | 
+                <a href="index.html">Home</a>
+            </p>
+        </section>
+    </section>
+</footer>
 
 </body>
 

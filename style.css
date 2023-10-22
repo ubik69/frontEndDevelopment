@@ -6,6 +6,7 @@
     body{
         width: 535px;
     }
+    
     #navigationBar-mobile{
         width: 300px;
         background-color: rgb(255, 136, 0);
@@ -52,70 +53,98 @@
         cursor: pointer;
         text-shadow: 2px 2px 3px #fdfdfd;
     }
-
+    
     .emptyBetweenGif{
         width: 1030px;
     }
     #smaller-width-big-section{
         width: 100px;
     }
-     .big-order-section {
-                position: relative;/*new ui for smaller devices should be made.*/
-                bottom: 350px;
-                right: 386px;
-                transform: scale(0.4);
-            }
+    .big-order-section {
+        position: relative;/*new ui for smaller devices should be made.*/
+        bottom: 350px;
+        right: 386px;
+        transform: scale(0.4);
+    }
 
-            .order-section h1,
-            .order-section h2 {
-                font-size: 25px;
-            }
+    .order-section h1,
+    .order-section h2 {
+        font-size: 25px;
+    }
 
-            .form-container {
-                padding: 6px;
-            }
+    .form-container {
+        padding: 6px;
+    }
 
-            .form-select {
-                padding: 5px;
-                font-size: 25px;
-            }
+    .form-select {
+        padding: 5px;
+        font-size: 25px;
+    }
 
-            #submit-button {
-                position: relative;
-                bottom: 120px;
-                padding: 1px 2px;
-                font-size: 1rem;
-            }
+    #submit-button {
+        position: relative;
+        bottom: 120px;
+        padding: 1px 2px;
+        font-size: 1rem;
+    }
 
-            /*navbar for mobile*/
-            .navbar {
-                display: none;
-                position: relative;
-                left: 160px;
-                height: 125px;
-                width: 250px;
-                background-color: rgb(255, 136, 0);
-              }
-              
-              .nav-links {
-                list-style: none;
-                display: grid;
-                justify-content: center;
-              }
-              
-              
-              .nav-links li a {
-                position: relative;
-                right: 20px;
-                font-size: 10px;
-                color: #fff;
-                text-decoration: none;
-              }
-              .nav-links li a:hover{
-                  color: black;
-                  transition: all 0.5s ease;
-              }
-              
+    /*navbar for mobile*/
+    .navbar {
+    display: none;
+    position: relative;
+    left: 160px;
+    height: 125px;
+    width: 250px;
+    background-color: rgb(255, 136, 0);
+    }
+    
+    .nav-links {
+    list-style: none;
+    display: grid;
+    justify-content: center;
+    }
+    
+    
+    .nav-links li a {
+    position: relative;
+    right: 20px;
+    font-size: 10px;
+    color: #fff;
+    text-decoration: none;
+    }
+    .nav-links li a:hover{
+        color: black;
+        transition: all 0.5s ease;
+    }
+    .mainAboutParagraph{
+        font-size: 17px;
+        width: 500px;
+    }
+    
+    #specialA{
+        display: flex;
+        margin-top: 100px;
+        margin-left: 100px;
+        font-size: 30px;
+    }
+    .furtherAbout{
+        text-align: left;  
+    }
+    #furtherAboutText{
+        margin-right: 1110px;
+        width: 300px;
+    }
+    .furtherPicture img{
+        display: none;
+    }
+    .explanationAbout p{
+        font-size: 15px;
+    }
+    #containerFind{
+        transform: translateX(-650px) scale(0.8);
+    }
+
+
   }
 
 
@@ -126,13 +155,78 @@
         padding: 5px 10px;
         font-size: 14px;
     }
+
+    .mainAboutParagraph{
+        font-size: 17px;
+        width: 500px;
+    }
+    
+    #specialA{
+        display: flex;
+        margin-top: 100px;
+        margin-left: 100px;
+        font-size: 30px;
+    }
+    .furtherAbout{
+        text-align: left;  
+    }
+    #furtherAboutText{
+        margin-right: 1110px;
+        width: 300px;
+    }
+    .furtherPicture img{
+        display: none;
+    }
+    .explanationAbout p{
+        font-size: 15px;
+    }
+    #containerFind{
+        transform: translateX(-500px);
+    }
 }
 
 @media screen and (min-width:871px) and (max-width:1100px){
     .navigateWeb{
         scale: 0.8;
     }
+    .mainAboutParagraph{
+        font-size: 17px;
+        width: 500px;
+    }
     
+    #specialA{
+        display: flex;
+        margin-top: 100px;
+        margin-left: 100px;
+        font-size: 30px;
+    }
+    .furtherAbout{
+        text-align: left;  
+    }
+    #furtherAboutText{
+        margin-right: 1110px;
+        width: 300px;
+    }
+    .furtherPicture img{
+        display: none;
+    }
+    .explanationAbout p{
+        font-size: 15px;
+    }
+    #containerFind{
+        transform: translateX(-450px);
+    }
+
+    
+}
+@media screen and (max-width:1800px){
+    .mainMenuAboutPic{
+            display: none;
+    }
+    #burgerStyled{
+        scale: 0.8;
+
+    }
 }
 
 
@@ -286,9 +380,6 @@ body{
 }
 
 
-.leftSideOfIndex{
-    float: left;
-}
 
 .big-order-section{
     transition: all 0.25s ease;
@@ -345,6 +436,7 @@ body{
     cursor: pointer;
 }
 .mainAbout{
+    color: wheat;
     font-size: 23px;
     width: 1200px;
     height: 200px;
@@ -358,14 +450,21 @@ body{
     animation: old_Effect 5s infinite;
     border-radius: 50px;
 }
-.belowAbout{
+.mainMenuAboutPic::after {
+    content: "('Our oldest menu from 70s')";
+    color: #FF5733;
+    position: relative;
+    bottom: 145px;
+    left: 200px;
+  }
+.belowAbout a{
     text-decoration: none;
     font-size: 50px;
     color: orange;
     margin-left: 450px;
-    width: 700px;
+
 }
-.belowAbout:hover{
+.belowAbout a:hover{
     animation: rainbow 15s infinite;
 }
 .emptyBetweenAbout{
@@ -373,22 +472,34 @@ body{
 }
 .furtherAbout{
     position: relative;
+    width: 1080px; /*this was causing website to have overflow for x axis*/
     left: 330px;
-    font-size: 70px;
+    font-size: 50px;
     display: grid;
     justify-content: center;
     color: white;
 }
 .explanationAbout{
     font-size: 25px;
-    width: 1200px;
+
+    color: wheat;
     float: right;
 }
 
 .burgerCentered{
-    height: 300px;
-    border: solid wheat;
+    height: 500px;
 }
+.centerAbout{
+    width: 100%;
+    display: grid;
+    justify-content: center;
+}
+
+.Burger_GIF{
+    cursor: pointer;
+    margin-top: 25px;
+}
+
 
 /*footer section*/
 
@@ -451,6 +562,7 @@ body{
     margin-bottom: 8px;
 }
 .unordered-list li a {
+    color: yellow;
     text-decoration: none;
     transition: 0.3s ease all;
 }
@@ -483,6 +595,40 @@ body{
     font-size: 14px;
     margin: 4px 0 20px 0;
 }
+.contactPart{
+    display: flex;
+    justify-content: center;
+}
+
+.contactForm{
+    border-radius: 10%;
+    background-color: rgba(255, 255, 255, 0.634);
+    width: 800px;
+    display: grid;
+    justify-content: center;
+    transition:  0.25s all ease;
+}
+.contactForm h1{
+    text-align: center;
+}
+.btn{
+    background-color: orange;
+}
+
+.btn:hover{
+    text-shadow: 0 2px 1px #000;
+    animation: 7s rainbow_Background infinite;
+}
+
+.checkout-item {
+    margin: 10px;
+}
+.selected-item {
+    background-color: #f2f2f2;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
 
 
 
@@ -510,18 +656,90 @@ body{
     }
     100%{
         color: beige;
+    }   
+}
+@keyframes rainbow_Background{
+    0%{
+        background-color: red;
     }
+    15%{
+        background-color: rgb(255, 0, 157);
+    }
+    30%{
+        background-color: green;
+    }
+    45%{
+        background-color: gold;
+    }
+    60%{
+        background-color: aquamarine;
+    }
+    75%{
+        background-color: aqua;
+    }
+    90%{
+        background-color: blue;
+    }
+    100%{
+        background-color: beige;
+    }   
 }
 
 @keyframes old_Effect{
     0%{
         filter: grayscale(0%);
-        
     }
-    100%{
+    50%{
         filter: grayscale(100%);
     }
+    100%{
+        filter: grayscale(0%);
+    }
 }
+
+
+.findUsContainer{
+    width: 800px;
+    border: solid;
+    height: 600px;
+    background-color: rgb(255, 197, 8);
+    border-radius: 10%;
+}
+
+.findUsContainer img{
+    width: 300px;
+    position: relative;
+    bottom: 120px;
+    transform: skewX(-10deg);
+}
+
+.findUsMap{
+    width: 400px;
+    height: 100%;
+    border-radius: 10%;
+}
+.findUsText p{
+    text-align: right;
+    position: relative;
+    bottom: 550px;
+    right: 85px;
+    font-size: 18px;
+    transform: 0.25 all ease;
+}
+.findUsText p:hover{
+    animation: rainbow 5s infinite;
+}
+
+.findUsText p:nth-child(2){
+    font-size: 17px;
+    width: 300px;
+    position: relative;
+    bottom: 200px;
+    left: 420px;
+    text-align: left;
+}
+
+
 
 
 
@@ -623,9 +841,17 @@ body{
 }
 #burgerStyled{
     width: 350px; 
-    position: relative; top: 200px;
+    text-align: left;
+    position: relative;
+    right: 70px;
+    top: 200px;
     transform: rotateY(180deg); 
     border-radius: 10%;
+}
+
+#containerFind{
+    position: relative;
+    left: 550px;
 }
 
 
