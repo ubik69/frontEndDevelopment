@@ -85,12 +85,19 @@
     </h1>
 
 <section class="big-order-section">
-    <aside class="order-picture"><img id="displayingPlace" src="images/order_place_holder.png"> <!--id added for javascript.-->
+    <aside class="order-picture">
+    <div id="displayingPlace">
+        <img id="displayingPlaceImg" src="images/order_place_holder.png">
+    </div> <!--id added for javascript.-->
     <div class="view3D">
-        <div class="sampleOrderPhoto">
+        <svg id="enable3D" xmlns="http://www.w3.org/2000/svg" fill="none"  viewBox="0 0 50 50">
+            <path fill="#D8DFEE" d="m41.2 37.9-2-3.6-.3-.3h-.2c-.3 0-.5.1-.5.3l-.8 1.3-4.2-2.5v-7.6c0-.5-.3-1-.8-1.3l-6.2-3.7H26v-5h1.4l.6-.3v-.6L25.9 11c-.2-.4-.7-.4-1 0l-2.1 3.6v.5c.1.3.4.3.5.3h1.5v5l-6.4 3.7c-.5.3-.7.8-.7 1.3V33l-4.3 2.6-.7-1.3a.7.7 0 0 0-.5-.3c-.2 0-.3.1-.5.3l-1.9 3.6c-.2.3 0 .8.5.8l4 .2c.2 0 .4-.2.5-.4V38l-.7-1.2 4.3-2.5 6.4 3.7a1.3 1.3 0 0 0 1.4 0l6.3-3.6v-.1l4.3 2.5-.7 1.3c-.2.2-.2.4 0 .6 0 .1.2.3.4.3h4c.5 0 .8-.7.6-1ZM25.4 21.7l5.9 3.4-5.8 3.4h-.1l-5.8-3.4 5.8-3.4ZM19 33v-6.9l5.7 3.4h.1v7L19.1 33Zm12.9 0L26 36.5v-6.9l5.8-3.4V33.1Z"></path>
+          </svg>
+        <div id="disable3D" class="sampleOrderPhoto"> <!--added id disable3D to disable 3d and switch to order picture.-->
             <img src="images/mini_place_holder.png">
         </div>
     </div>
+    <script type="module" src="3D-Model.js"></script><!--script for 3D model view--> 
     </aside>
     <section class="order-section">
         <h1 style="text-align: center; color: white;">ORDER AS <span style="color: yellow;">YOU</span> DESIRE</h1><br>
