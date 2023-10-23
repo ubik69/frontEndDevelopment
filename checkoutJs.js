@@ -16,8 +16,8 @@ let addExtraButton = document.getElementById('addExtraButton'); // for ordering 
 let extraSelectionDiv = document.getElementById('extraSelection'); // for ordering extra burger
 let orderOptions = document.getElementById('orderOptions'); // for ordering extra burger
 let addSelectedOrderButton = document.getElementById('addSelectedOrder'); // for ordering extra burger
-
-
+let paymentButtons = document.getElementById('paypal-button-container'); // paypal ordering button
+renderPayPalButton(total); // initial payment button called after base order selections.
 
 if (burger) {
     let burgerDiv = document.createElement('div');
@@ -37,6 +37,7 @@ if (burger) {
     
     totalPrice.style.display = 'block'; // if there were none in checkout , total does not display.
     addExtraButton.style.display = 'block'; // if there were no burgers in checkout , this button would not appear but since there is , it's not displayed.
+    paymentButtons.style.display = 'block'; // if there is something in basket , payment ways appear.
 }
 addExtraButton.addEventListener('click', function () {
     extraSelectionDiv.style.display = 'block'; // show the burger selection options
@@ -111,9 +112,35 @@ addSelectedOrderButton.addEventListener('click', function () {
         extraDrinkAdd(orderName);
     }
     
+
     
 })
 })
+
+function renderPayPalButton(total) {
+    if (paymentButtons){
+        paymentButtons.innerHTML=''; // needed to empty previous div
+    }
+
+    total = total.toFixed(2); // this was causing a problem called DECIMAL_PRECISION where if a number has too many zeros , paypal doesn't let it process.
+
+    paypal.Buttons({
+        createOrder: function (data, actions) {
+            return actions.order.create({
+                purchase_units: [{
+                    amount: {
+                        value: total
+                    }
+                }]
+            });
+        },
+        onApprove: function (data, actions) {
+            return actions.order.capture().then(function (details) {
+                alert('Transaction completed by ' + details.payer.name.given_name);
+            });
+        }
+    }).render('#paypal-button-container');
+}
 
 function extraBurgerAdd(orderName){
     let burgerDiv = document.createElement('div');
@@ -139,6 +166,7 @@ function extraDrinkAdd(orderName){
 function updateTotalPrice() {
     // updating the total price on the page
     document.getElementById('totalPrice').textContent = 'Total: £' + total.toFixed(2);
+    renderPayPalButton(total);
 }
 
 document.getElementById('totalPrice').textContent = 'Total: £' + total.toFixed(2); // initial total price.

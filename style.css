@@ -881,7 +881,7 @@ body{
     display: none;
 }
 #addSelectedOrder{
-    background-color: orangered;
+    background-color: rgb(255, 47, 75);
     transition: all 0.25s ease;
     color: white;
 }
@@ -893,5 +893,8 @@ body{
     font-size: 25px;
     text-align: center;
     color: green;
+}
+#paypal-button-container{
+    display: none;
 }
 
