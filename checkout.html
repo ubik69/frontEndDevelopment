@@ -81,14 +81,23 @@
 </h1>
 <div class="checkout-item">
     <h2>Your Selected Items:</h2>
-    <button id="addBurgerButton">Add Burger</button>
-    <div id="burgerSelection">
-      <select id="burgerOptions">
+    <button id="addExtraButton">Make it a bigger order</button>
+    <div id="extraSelection">
+      <select id="orderOptions">
+        <option disabled>Burgers</option>
         <option value="basic">Toon-Tastic Burger Delights - £4.99</option>
         <option value="cheese">Cheeseville Burger - £6.99</option>
         <option value="whooper">Burger Bonanza: An Animated Feast - £8.99</option>
+        <option disabled>Fries</option>
+        <option value="regular">Regular Salted Fries - £1.59</option>
+        <option value="skinned">Skin-on Fries - £1.59</option>
+        <option value="seasoned">Signature Putso Seasoned Fries - £1.99</option>
+        <option disabled>Drinks</option>
+        <option value="vanilla">Vanilla flavour - £5.99</option>
+        <option value="chocolate">Chocolate flavour - £5.99</option>
+        <option value="strawberry">Strawberry flavour - £5.99</option>
       </select>
-      <button id="addSelectedBurger">Add Burger</button><br>
+      <button id="addSelectedOrder">Add Order</button><br>
     </div>
     <div id="selectedItems"></div>
     <div id="totalPrice">Total: £0.00</div>

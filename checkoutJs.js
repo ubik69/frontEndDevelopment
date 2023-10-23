@@ -12,10 +12,11 @@ let total = str_burger_price+str_fries_price+str_drink_price; //calculating tota
 
 
 let selectedItemsDiv = document.getElementById('selectedItems');
-let addBurgerButton = document.getElementById('addBurgerButton'); // for ordering extra burger
-let burgerSelectionDiv = document.getElementById('burgerSelection'); // for ordering extra burger
-let burgerOptions = document.getElementById('burgerOptions'); // for ordering extra burger
-let addSelectedBurgerButton = document.getElementById('addSelectedBurger'); // for ordering extra burger
+let addExtraButton = document.getElementById('addExtraButton'); // for ordering extra burger
+let extraSelectionDiv = document.getElementById('extraSelection'); // for ordering extra burger
+let orderOptions = document.getElementById('orderOptions'); // for ordering extra burger
+let addSelectedOrderButton = document.getElementById('addSelectedOrder'); // for ordering extra burger
+
 
 
 if (burger) {
@@ -35,40 +36,11 @@ if (burger) {
     selectedItemsDiv.appendChild(burgerDiv);
     
     totalPrice.style.display = 'block'; // if there were none in checkout , total does not display.
-    addBurgerButton.style.display = 'block'; // if there were no burgers in checkout , this button would not appear but since there is , it's not displayed.
+    addExtraButton.style.display = 'block'; // if there were no burgers in checkout , this button would not appear but since there is , it's not displayed.
 }
-addBurgerButton.addEventListener('click', function () {
-    burgerSelectionDiv.style.display = 'block'; // show the burger selection options
+addExtraButton.addEventListener('click', function () {
+    extraSelectionDiv.style.display = 'block'; // show the burger selection options
 });
-
-document.addEventListener("DOMContentLoaded",function(){
-addSelectedBurgerButton.addEventListener('click', function () {
-    let selectedOption = burgerOptions.options[burgerOptions.selectedIndex];
-    let burgerName = selectedOption.text;
-
-    if(burgerName == 'Toon-Tastic Burger Delights - £4.99'){
-        total += 4.99;
-        updateTotalPrice();
-    }
-    else if(burgerName == 'Cheeseville Burger - £6.99'){
-        total += 6.99;
-        updateTotalPrice();
-    }else if(burgerName == 'Burger Bonanza: An Animated Feast - £8.99'){
-        total += 8.99;
-        updateTotalPrice();
-    }
-    
-    // Create a new div for the selected burger
-    let burgerDiv = document.createElement('div');
-    burgerDiv.className = 'selected-item';
-    burgerDiv.textContent = 'Burger: ' + burgerName;
-    selectedItemsDiv.appendChild(burgerDiv);
-
-
-    
-})
-})
-
 if (fries) {
     let friesDiv = document.createElement('div');
     friesDiv.className = 'selected-item';
@@ -80,6 +52,87 @@ if (drink) {
     let drinkDiv = document.createElement('div');
     drinkDiv.className = 'selected-item';
     drinkDiv.textContent = 'Drink: ' + drink;
+    selectedItemsDiv.appendChild(drinkDiv);
+}
+
+document.addEventListener("DOMContentLoaded",function(){
+addSelectedOrderButton.addEventListener('click', function () {
+    let selectedOption = orderOptions.options[orderOptions.selectedIndex];
+    let orderName = selectedOption.text;
+    
+
+    if(orderName == 'Toon-Tastic Burger Delights - £4.99'){
+        total += 4.99;
+        updateTotalPrice();
+        // Create a new div for the selected burger
+        extraBurgerAdd(orderName);
+    }
+    else if(orderName == 'Cheeseville Burger - £6.99'){
+        total += 6.99;
+        updateTotalPrice();
+        // Create a new div for the selected burger
+        extraBurgerAdd(orderName);
+    }else if(orderName == 'Burger Bonanza: An Animated Feast - £8.99'){
+        total += 8.99;
+        updateTotalPrice();
+        // Create a new div for the selected burger
+        extraBurgerAdd(orderName);
+    }else if(orderName == 'Regular Salted Fries - £1.59'){
+        total += 1.59;
+        updateTotalPrice();
+        // Create a new div for the selected fries
+        extraFriesAdd(orderName);
+    }else if(orderName == 'Skin-on Fries - £1.59'){
+        total +=1.59;
+        updateTotalPrice();
+        // Create a new div for the selected fries
+        extraFriesAdd(orderName);
+    }else if(orderName == 'Signature Putso Seasoned Fries - £1.99'){
+        total += 1.99;
+        updateTotalPrice();
+        // Create a new div for the selected fries
+        extraFriesAdd(orderName);
+    }else if(orderName == 'Vanilla flavour - £5.99'){
+        total += 5.99;
+        updateTotalPrice();
+        // Create a new div for the selected fries
+        extraDrinkAdd(orderName);
+    }
+    else if(orderName == 'Chocolate flavour - £5.99'){
+        total += 5.99;
+        updateTotalPrice();
+        // Create a new div for the selected fries
+        extraDrinkAdd(orderName);
+    }
+    else if(orderName == 'Strawberry flavour - £5.99'){
+        total += 5.99;
+        updateTotalPrice();
+        // Create a new div for the selected fries
+        extraDrinkAdd(orderName);
+    }
+    
+    
+})
+})
+
+function extraBurgerAdd(orderName){
+    let burgerDiv = document.createElement('div');
+    burgerDiv.className = 'selected-item';
+    burgerDiv.textContent = 'Burger: ' + orderName;
+    selectedItemsDiv.appendChild(burgerDiv);
+}
+
+function extraFriesAdd(orderName){
+    let friesDiv = document.createElement('div');
+    friesDiv.className = 'selected-item';
+    friesDiv.textContent = 'Fries: ' + orderName;
+    selectedItemsDiv.appendChild(friesDiv);
+}
+
+function extraDrinkAdd(orderName){
+    let drinkDiv = document.createElement('div');
+    drinkDiv.className = 'selected-item';
+    drinkDiv.textContent = 'Drink: ' + orderName;
     selectedItemsDiv.appendChild(drinkDiv);
 }
 

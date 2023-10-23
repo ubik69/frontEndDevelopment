@@ -863,8 +863,8 @@ body{
     width: 450px;
     height: 200px;
 }
-
-#addBurgerButton{
+/*for extra burger*/
+#addExtraButton{
     display: none;
     background-color: yellow;
     scale: 1.23;
@@ -874,13 +874,20 @@ body{
     bottom: 20px;
 }
 
-#addBurgerButton:active{
+#addExtraButton:active{
     scale: 0.56;
 }
-#burgerSelection{
+#extraSelection{
     display: none;
 }
-
+#addSelectedOrder{
+    background-color: orangered;
+    transition: all 0.25s ease;
+    color: white;
+}
+#addSelectedOrder:active{
+    scale: 0.7;
+}
 #totalPrice{
     display: none;
     font-size: 25px;
