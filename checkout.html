@@ -80,10 +80,21 @@
             Welcome to <span style="color: red;">check out</span> page.
 </h1>
 <div class="checkout-item">
-    <h3>Your Selected Items:</h3>
+    <h2>Your Selected Items:</h2>
+    <button id="addBurgerButton">Add Burger</button>
+    <div id="burgerSelection">
+      <select id="burgerOptions">
+        <option value="basic">Toon-Tastic Burger Delights - £4.99</option>
+        <option value="cheese">Cheeseville Burger - £6.99</option>
+        <option value="whooper">Burger Bonanza: An Animated Feast - £8.99</option>
+      </select>
+      <button id="addSelectedBurger">Add Burger</button><br>
+    </div>
     <div id="selectedItems"></div>
+    <div id="totalPrice">Total: £0.00</div>
 </div>
 <script src="checkoutJs.js"></script> <!--order processing.-->
+
 <footer class="app-footer">
     <section class="container">
         <section class="footer-content">

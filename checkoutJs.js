@@ -10,9 +10,13 @@ let str_drink_price = parseFloat(drink_price); // changed string to integer.
  
 let total = str_burger_price+str_fries_price+str_drink_price; //calculating total price.
 
-//document.write('£'+total);
 
 let selectedItemsDiv = document.getElementById('selectedItems');
+let addBurgerButton = document.getElementById('addBurgerButton'); // for ordering extra burger
+let burgerSelectionDiv = document.getElementById('burgerSelection'); // for ordering extra burger
+let burgerOptions = document.getElementById('burgerOptions'); // for ordering extra burger
+let addSelectedBurgerButton = document.getElementById('addSelectedBurger'); // for ordering extra burger
+
 
 if (burger) {
     let burgerDiv = document.createElement('div');
@@ -29,7 +33,41 @@ if (burger) {
     }
     burgerDiv.textContent = 'Burger: ' + burger;
     selectedItemsDiv.appendChild(burgerDiv);
+    
+    totalPrice.style.display = 'block'; // if there were none in checkout , total does not display.
+    addBurgerButton.style.display = 'block'; // if there were no burgers in checkout , this button would not appear but since there is , it's not displayed.
 }
+addBurgerButton.addEventListener('click', function () {
+    burgerSelectionDiv.style.display = 'block'; // show the burger selection options
+});
+
+document.addEventListener("DOMContentLoaded",function(){
+addSelectedBurgerButton.addEventListener('click', function () {
+    let selectedOption = burgerOptions.options[burgerOptions.selectedIndex];
+    let burgerName = selectedOption.text;
+
+    if(burgerName == 'Toon-Tastic Burger Delights - £4.99'){
+        total += 4.99;
+        updateTotalPrice();
+    }
+    else if(burgerName == 'Cheeseville Burger - £6.99'){
+        total += 6.99;
+        updateTotalPrice();
+    }else if(burgerName == 'Burger Bonanza: An Animated Feast - £8.99'){
+        total += 8.99;
+        updateTotalPrice();
+    }
+    
+    // Create a new div for the selected burger
+    let burgerDiv = document.createElement('div');
+    burgerDiv.className = 'selected-item';
+    burgerDiv.textContent = 'Burger: ' + burgerName;
+    selectedItemsDiv.appendChild(burgerDiv);
+
+
+    
+})
+})
 
 if (fries) {
     let friesDiv = document.createElement('div');
@@ -44,6 +82,14 @@ if (drink) {
     drinkDiv.textContent = 'Drink: ' + drink;
     selectedItemsDiv.appendChild(drinkDiv);
 }
+
+function updateTotalPrice() {
+    // updating the total price on the page
+    document.getElementById('totalPrice').textContent = 'Total: £' + total.toFixed(2);
+}
+
+document.getElementById('totalPrice').textContent = 'Total: £' + total.toFixed(2); // initial total price.
+
 
 
 localStorage.clear(); // for security purposes , after selections are taken , localstorage been wiped.

@@ -429,7 +429,7 @@ body{
 .sampleOrderPhoto{
     position: relative;
     left: 446px;
-    bottom: 3px;
+    bottom: 203px;
     width: 449px;
     height: 200px;
     border: solid white;
@@ -854,5 +854,37 @@ body{
     left: 550px;
 }
 
+#displayingPlace{
+    width: 894px !important;
+    height: 1000px !important;
+}
 
+#enable3D{
+    width: 450px;
+    height: 200px;
+}
+
+#addBurgerButton{
+    display: none;
+    background-color: yellow;
+    scale: 1.23;
+    transition: all 0.25s ease;
+    position: relative;
+    left: 20px;
+    bottom: 20px;
+}
+
+#addBurgerButton:active{
+    scale: 0.56;
+}
+#burgerSelection{
+    display: none;
+}
+
+#totalPrice{
+    display: none;
+    font-size: 25px;
+    text-align: center;
+    color: green;
+}
 
