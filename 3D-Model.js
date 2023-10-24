@@ -50,6 +50,9 @@ document.addEventListener("DOMContentLoaded",function(){ /*we have this to be ab
   function (gltf) {
     //If the file is loaded, add it to the scene
     object = gltf.scene;
+
+    //Larger model
+    object.scale.set(5, 5, 5);
   },
   function (xhr) {
     //While it is loading, log the progress
@@ -77,7 +80,7 @@ renderer.setSize(container.clientWidth, container.clientHeight);
 container.appendChild(renderer.domElement);
  
 //Set how far the camera will be from the 3D model
-camera.position.z = objToRender === "burger" ? 1.5 : 500; /*25 is the distance between 3d model and user.*/
+camera.position.z = objToRender === "burger" ? 8 : 500; /*25 is the distance between 3d model and user.*/
  
 //Add lights to the scene, so we can actually see the 3D model
 const topLight = new THREE.DirectionalLight(0xffffff, 1);

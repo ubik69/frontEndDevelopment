@@ -37,7 +37,7 @@ if (burger) {
     
     totalPrice.style.display = 'block'; // if there were none in checkout , total does not display.
     addExtraButton.style.display = 'block'; // if there were no burgers in checkout , this button would not appear but since there is , it's not displayed.
-    paymentButtons.style.display = 'block'; // if there is something in basket , payment ways appear.
+    paymentButtons.style.display = 'grid'; // if there is something in basket , payment ways appear.
 }
 addExtraButton.addEventListener('click', function () {
     extraSelectionDiv.style.display = 'block'; // show the burger selection options

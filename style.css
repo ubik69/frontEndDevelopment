@@ -343,16 +343,17 @@ body{
 .moving-text {
     position: absolute;
     white-space: nowrap; 
-    animation: moveText 14s linear infinite;
+    animation: moveText 12s linear infinite;
     position: relative;
     overflow: hidden;
 }
+/*made it smoother*/
 @keyframes moveText {
     0% {
-      transform: translateX(0%);
+      transform: translateX(-65%); 
     }
     100%{
-        transform: translateX(100%);
+        transform: translateX(110%);
     }
 
 }
@@ -896,5 +897,6 @@ body{
 }
 #paypal-button-container{
     display: none;
+    justify-content: center;
 }
 

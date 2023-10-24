@@ -59,23 +59,89 @@
 </header>
 
 <body>
+<!--Needed audios for clicking sound effects-->
+<audio id="audio1">
+    <source src="audios/munch1.mp3" type="audio/mp3">
+</audio>
+<audio id="audio2">
+    <source src="audios/munch2.mp3" type="audio/mp3">
+</audio>
+<audio id="audio3">
+    <source src="audios/munch3.mp3" type="audio/mp3">
+</audio>
+<audio id="audio4">
+    <source src="audios/munch4.mp3" type="audio/mp3">
+</audio>
+<audio id="audio5">
+    <source src="audios/munch5.mp3" type="audio/mp3">
+</audio>
     <main>
         <h1 style="color: white;text-shadow:1px 1px 0 #000,-1px 1px 0 #000,-1px -1px 0 #000,1px -1px 0 #000;">
                 Welcome to <span style="color: red;">About us</span> page.
         </h1>
-        <section class="mainAbout">We are serving our amazing customers with our burgers since <b style="color: yellow;">1969</b> and continue to do so. na semper sisque.llus.Nullam at nisl dui. Morbi feugiat sed metus at laoreet. Suspendisse semper lacinia velit, sit amet sagittis justo suscipit sit amet. <span style="color: red;">Nulla</span> cursus est vel leo tempor, veNullam at nisl dui. Morbi feugiat sed metus at laoreet. Suspendisse semper lacinia velit, sit amet sagittis justo suscipit sit amet. Nulla cursus est vel leo tempor, veNullam at nisl dui. Morbi feugiat sed metus at laoreet. Suspendisse semper lacinia velit, sit amet sagittis justo suscipit <span style="color: red;">sit</span> amet. Nulla cursus est vel leo tempor, ve</section>
+        <section class="mainAbout"><p class="mainAboutParagraph">We are serving our amazing customers with our burgers since <b style="color: yellow;">1969</b> and continue to do so. na semper sisque.llus.Nullam at nisl dui. Morbi feugiat sed metus at laoreet. Suspendisse semper lacinia velit, sit amet sagittis justo suscipit sit amet. <span style="color: red;">Nulla</span> cursus est vel leo tempor, veNullam at nisl dui. Morbi feugiat sed metus at laoreet. Suspendisse semper lacinia velit, sit amet sagittis justo suscipit sit amet. Nulla cursus est vel leo tempor, veNullam at nisl dui. Morbi feugiat sed metus at laoreet. Suspendisse semper lacinia velit, sit amet sagittis justo suscipit <span style="color: red;">sit</span> amet. Nulla cursus est vel leo tempor, ve</p></section>
         <aside class="mainMenuAboutPic"><img class="mainMenuAboutPic" src="images/our_menu.png"></aside>
-        <a href="order.html" class="belowAbout">Visit us any time</a>
+        <section class="belowAbout"><a id="specialA" href="order.html" >Visit us any time</a></section>
         <section class="emptyBetweenAbout"></section>
         <aside class="furtherPicture"><img id="burgerStyled" src="images/burger.png"></aside>
-        <section class="furtherAbout">Why us?
+        <section class="furtherAbout"><p id="furtherAboutText">Why us?</p>
         </section>
-        <p class="explanationAbout">We proudly claim the title of the <b style="color: yellow;">best burger</b> company for several compelling reasons. First and foremost, our commitment to quality is unwavering. Our burgers are made from the finest, freshest ingredients, ensuring a taste that's second to none. We source locally whenever possible, supporting our community and guaranteeing the freshest produce.
-            Our burgers are crafted with passion and expertise. Our chefs are <b style="color: orange;">dedicated</b> to the art of burger-making, constantly refining our recipes to perfection. We offer a diverse menu, catering to a wide range of tastes and dietary preferences, from juicy beef patties to mouthwatering plant-based options, and a variety of toppings to create personalized masterpieces.</p>
+        <article class="explanationAbout">
+        <p>We proudly claim the title of the <b style="color: yellow;">best burger</b> company for several compelling reasons. First and foremost, our commitment to quality is unwavering. Our burgers are made from the finest, freshest ingredients, ensuring a taste that's second to none. We source locally whenever possible, supporting our community and guaranteeing the freshest produce.
+        Our burgers are crafted with passion and expertise. Our chefs are <b style="color: orange;">dedicated</b> to the art of burger-making, constantly refining our recipes to perfection. We offer a diverse menu, catering to a wide range of tastes and dietary preferences, from juicy beef patties to mouthwatering plant-based options, and a variety of toppings to create personalized masterpieces.</p>
+        </article>
         <section class="emptyBetweenAbout"></section>
-        <section class="burgerCentered">GET YOUR BURGER TODAY.</section>
+        <section class="burgerCentered">
+            <div class="centerAbout">
+            <img class="Burger_GIF" onclick="delayedDirect()" src="images/burger_gif.gif" alt="yummy burger">
+            </div>
+        </section>
+        <section style="height: 200px;"></section> <!--empty between divs, could be done with margin top also however , the classes used in a different way in this page.-->
         </main>
 
+<script>
+    /*animation on click to burger gif at bottom.*/
+    function delayedDirect(){
+        setTimeout(direct,700);
+        randomAudio()
+    }
+    function direct(){
+        window.location.href="order.html";
+    }
+</script>
+<footer class="app-footer">
+    <section class="container">
+        <section class="footer-content">
+            <section class="app-info">
+                <h2>PUTSO</h2>
+                <p>We <span style="color: yellow;">PUT</span><span style="color: orange;">SO</span> Much Love in Since 1969 <i style="color: red;" class="fa fa-heart"></i><i style="color: yellow;" class="fa fa-heart"></i><i style="color: orange;" class="fa fa-heart"></i></p>
+            </section>
+            <section class="footer-actions">
+                <section class="services-actions">
+                    <h2 class="action-header">Services</h2>
+                    <ul class="unordered-list">
+                        <li><a href="findus.html">Find us in your area</a></li>
+                        <li><a href="contact.html">Contact us</a></li>
+                        <li><a href="order.html">Order Page</a></li>
+                        <li><a href="aboutus.html">About us</a></li>
+                    </ul>
+                </section>
+            </section>
+        </section>
+        <section class="social-icons">
+            <a href="https://facebook.com/putso"><img src="images/facebook.png" alt="fb-icon"></a>
+            <a href="https://instagram.com/putso"><img src="images/instagram.png" alt="insta-icon"></a>
+            <a href="https://twitter.com/putso"><img src="images/twitter.png" alt="twitter-icon"></a>
+            <a href="https://youtube.com/putso"><img src="images/youtube.png" alt="yt-icon"></a>
+        </section>
+        <section class="copyright">
+            <p class="copyright-text">
+                &copy;<b style="color: rgba(255, 255, 0, 0.466);">PUTSO</b> 2023 All rights reserved | 
+                <a href="index.html">Home</a>
+            </p>
+        </section>
+    </section>
+</footer>        
 </body>
 
 
