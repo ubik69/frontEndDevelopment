@@ -44,6 +44,8 @@ document.addEventListener("DOMContentLoaded",function(){ /*we have this to be ab
     else if(selected_model == 'images/edited_whoop.png'){
     burgerType = 'whooper_Burger';
     }
+  
+
     //Load the file
   loader.load(
   `models/${objToRender}/${burgerType}.gltf`,
@@ -53,6 +55,8 @@ document.addEventListener("DOMContentLoaded",function(){ /*we have this to be ab
 
     //Larger model
     object.scale.set(5, 5, 5);
+
+    scene.add(object); // fixed a bug when changing burgers, you had to click 3D model to make models appear.
   },
   function (xhr) {
     //While it is loading, log the progress
@@ -62,7 +66,7 @@ document.addEventListener("DOMContentLoaded",function(){ /*we have this to be ab
     //If there is an error, log it
     console.error(error);
   }
-  );
+  )
   })
 })
 
