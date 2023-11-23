@@ -35,6 +35,7 @@ function changeText(){
 function direction(){
     if (burgerSelection.value == "Select your burger choice" || friesSelection.value=="Select your side"){ // if user does not buy the required pieces , system won't let to proceed.
         window.location.href="order.html";
+        localStorage.clear();
     }else{
         window.location.href='checkout.html';
     }
